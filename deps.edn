@@ -1,1 +1,4 @@
-{}
+{:aliases
+ {:dev
+  {:extra-deps
+   {org.clojure/data.xml {:mvn/version "0.0.8"}}}}}
