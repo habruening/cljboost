@@ -47,6 +47,7 @@
                   }]
              [k1 k2 s1 s2 sym1 sym2 m]))))
 
+  
   (testing "the escape behaviour"
     (is (= (elet [x 17
                   :escape false]
@@ -79,10 +80,10 @@
                  x)
            "error"))))
 
-(deftest str|-test 
+(deftest str|-test-1 
   (is (= (str| "") "")))
 
-(deftest str|-test
+(deftest str|-test-2
   (protocol
    (str| "") => ""
    (str| "   a") => "   a"
