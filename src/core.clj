@@ -12,7 +12,7 @@
    Examples:
 
    ````
-   (let [a (read)
+   (elet [a (read)
          b (read)
          :escape (when (zero? b) :divide-by-zero-prevented)]
      (/ a b))
@@ -21,7 +21,7 @@
    The formatting can often support the readability of the code.
 
    ````
-   (let [a (read)
+   (elet [a (read)
          b (read) :escape (when (zero? b) :divide-by-zero-prevented)]
      (/ a b))
    ````
@@ -30,7 +30,7 @@
    falsy.
 
    ````
-   (let [a (read)
+   (elet [a (read)
          b (read)
          safety-check (if (zero? b) :divide-by-zero) 
          :escape safety-check]
@@ -42,7 +42,7 @@
    ````
    (require '[clojure.java.io :as io])
 
-   (let [file-name \"test.dat\"
+   (elet [file-name \"test.dat\"
       :escape (when (not (.exists (io/file file-name))) :file-does-not-exist)
       file (slurp file-name)]
   (println file))
